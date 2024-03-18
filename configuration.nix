@@ -134,6 +134,7 @@
     git
     neofetch
     pavucontrol
+    prismlauncher
   ];
 
   hardware.opengl = {

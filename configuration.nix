@@ -108,6 +108,7 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
+    iosevka
   ];
 
   # List packages installed in system profile. To search, run:

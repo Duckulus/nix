@@ -127,12 +127,13 @@
     rofi-wayland
     vscode
     jetbrains.idea-ultimate
-    discord
+    webcord-vencord
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.requests
     ]))
     git
     neofetch
+    pavucontrol
   ];
 
   hardware.opengl = {

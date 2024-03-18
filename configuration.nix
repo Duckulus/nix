@@ -131,7 +131,7 @@
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.requests
       python-pkgs.selenium
-      python-pkgs.webdriver_manager
+      python-pkgs.webdriver-manager
     ]))
     git
     neofetch

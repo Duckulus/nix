@@ -131,12 +131,12 @@
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.requests
       python-pkgs.selenium
-      python-pkgs.selenium-webdriver
     ]))
     git
     neofetch
     pavucontrol
     prismlauncher
+    chromedriver
   ];
 
   hardware.opengl = {

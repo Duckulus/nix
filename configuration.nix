@@ -130,6 +130,7 @@
     webcord-vencord
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.requests
+      python-pkgs.selenium
     ]))
     git
     neofetch

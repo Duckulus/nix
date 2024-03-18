@@ -130,7 +130,6 @@
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.requests
     ]))
-  ];
     git
     neofetch
   ];

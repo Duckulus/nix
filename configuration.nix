@@ -138,6 +138,7 @@
     prismlauncher
     chromedriver
     chromium
+    pinta
   ];
 
   hardware.opengl = {

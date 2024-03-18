@@ -137,6 +137,7 @@
     pavucontrol
     prismlauncher
     chromedriver
+    chrome
   ];
 
   hardware.opengl = {

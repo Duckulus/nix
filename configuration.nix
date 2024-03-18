@@ -140,6 +140,7 @@
     chromedriver
     chromium
     pinta
+    openjdk11
   ];
 
   hardware.opengl = {

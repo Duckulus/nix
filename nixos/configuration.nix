@@ -69,7 +69,7 @@
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
-    gtk-application-prefer-dark-theme = "1";
+    GTK_APPLICATION_PREFER_DARK_THEME = "1";
   };
 
   # Configure keymap in X11

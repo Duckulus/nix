@@ -44,9 +44,11 @@
       ls = "eza -lh";
       cat = "bat";
     };
-    envExtra = ''
-      export PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b ";
-    '';
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "af-magic";
+    };
   };
 
   # Let Home Manager install and manage itself.

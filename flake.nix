@@ -4,27 +4,27 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
   };
-  outputs = {self, nixpkgs}:
-  let 
-    system = "x86_64-linux";
-    
-    pkgs = import nixpkgs {
-      inherit system;
+  outputs = { self, nixpkgs }:
+    let
+        system = "x86_64-linux";
 
-      config = {
-        allowUnfree = true;
+      pkgs = import nixpkgs {
+        inherit system;
+
+        config = {
+          allowUnfree = true;
+        };
+      };
+    in
+    {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit system; };
+
+          modules = [
+            ./nixos/configuration.nix
+          ];
+        };
       };
     };
-  in
-  {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; };
-
-        modules = [
-          ./nixos/configuration.nix
-        ];
-      };
-    };
-  };
 }

@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -42,23 +43,25 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   services.xserver.displayManager.sddm.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  
+
   programs.hyprland = {
     enable = true;
     enableNvidiaPatches = true;
     xwayland.enable = true;
   };
-  
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
-    gtk-application-prefer-dark-theme="1";
+    gtk-application-prefer-dark-theme = "1";
   };
 
   # Configure keymap in X11
@@ -100,13 +103,12 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-    #  thunderbird
     ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     iosevka
@@ -151,7 +153,7 @@
     driSupport32Bit = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -159,7 +161,7 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable; 
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   # This value determines the NixOS release from which the default

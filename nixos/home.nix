@@ -35,6 +35,12 @@
     };
   };
 
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

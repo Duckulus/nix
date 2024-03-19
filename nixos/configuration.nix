@@ -145,6 +145,7 @@
     openjdk11
     nixpkgs-fmt
     nil
+    home-manager
   ];
 
   hardware.opengl = {

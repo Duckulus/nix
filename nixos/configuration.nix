@@ -156,6 +156,10 @@
     home-manager
   ];
 
+  environment.etc = with pkgs; {
+    "jdk11".source = openjdk11;
+  };
+
   hardware.opengl = {
     enable = true;
     driSupport = true;

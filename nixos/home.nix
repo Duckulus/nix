@@ -14,8 +14,9 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
 
-  home.packages = [
-
+  home.packages = with pkgs; [
+    eza
+    bat
   ];
 
   home.file = {
@@ -39,6 +40,11 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
+    shellAliases = {
+      ls = "eza -lh";
+      cat = "bat";
+    };
+    PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b ";
   };
 
   # Let Home Manager install and manage itself.

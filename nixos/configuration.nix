@@ -137,7 +137,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     (waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
@@ -147,29 +147,8 @@
     hyprpaper
     kitty
     rofi-wayland
-    vscode
-    jetbrains.idea-ultimate
-    webcord-vencord
-    (pkgs.python3.withPackages (python-pkgs: [
-      python-pkgs.requests
-      python-pkgs.selenium
-    ]))
-    git
-    neofetch
-    pavucontrol
-    prismlauncher
-    chromedriver
-    chromium
-    pinta
-    openjdk11
-    nixpkgs-fmt
-    nil
     home-manager
   ];
-
-  environment.etc = with pkgs; {
-    "jdk11".source = openjdk11;
-  };
 
   hardware.opengl = {
     enable = true;

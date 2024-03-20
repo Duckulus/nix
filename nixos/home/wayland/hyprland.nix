@@ -78,7 +78,6 @@
       [
         "$mod, RETURN, exec, kitty"
         "$mod, Q, killactive,"
-        "$mod, M, exit, "
         "$mod, E, exec, dolphin"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen, 0"
@@ -103,6 +102,9 @@
 
         # screenshot
         "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
+
+        # monocle mode (dwm)
+        "$mod, M, fullscreen, 1"
 
         # Scroll through existing workspaces with mod + scroll
         "$mod, mouse_down, workspace, e+1"

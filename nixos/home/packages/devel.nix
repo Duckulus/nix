@@ -20,7 +20,6 @@
       meta.priority = 300;
     }))
 
-    git
     chromedriver
   ];
 

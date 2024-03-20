@@ -1,7 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, unstable, ... }: {
   home.packages = with pkgs; [
     firefox
-    webcord-vencord
     pavucontrol
     chromium
     pinta
@@ -9,5 +8,6 @@
     neofetch
     eza
     bat
+    unstable.webcord-vencord
   ];
 }

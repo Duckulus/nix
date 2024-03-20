@@ -1,9 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    webcord-vencord
-    neofetch
+    webcord-vencord    
     pavucontrol
     chromium
     pinta
+
+    neofetch
+    eza
+    bat
   ];
 }

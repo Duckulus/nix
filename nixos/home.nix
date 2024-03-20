@@ -13,12 +13,6 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-
-  home.packages = with pkgs; [
-    eza
-    bat
-  ];
-
   home.file = {
 
   };
@@ -45,6 +39,10 @@
       cat = "bat";
     };
   };
+
+  imports = [
+    ./packages
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

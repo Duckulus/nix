@@ -62,6 +62,7 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
   # Enable the X11 windowing system.
@@ -149,6 +150,10 @@
     rofi-wayland
     home-manager
   ];
+
+  environment.etc = with pkgs; {
+    "jdk11".source = openjdk11;
+  };
 
   hardware.opengl = {
     enable = true;

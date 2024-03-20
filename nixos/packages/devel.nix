@@ -5,13 +5,16 @@
     nil
     nixpkgs-fmt
 
-    (pkgs.python3.withPackages (python-pkgs: [
+    (python3.withPackages (python-pkgs: [
       python-pkgs.requests
       python-pkgs.selenium
     ]))
+
     openjdk8
     openjdk11
-    openjdk17
+    (openjdk17.overrideAttrs (oldAttrs: {
+      meta.priority = 100;
+    }))
 
     git
     chromedriver

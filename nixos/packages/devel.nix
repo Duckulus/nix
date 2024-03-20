@@ -10,10 +10,14 @@
       python-pkgs.selenium
     ]))
 
-    openjdk8
-    openjdk11
-    (openjdk17.overrideAttrs (oldAttrs: {
+    (openjdk8.overrideAttrs (oldAttrs: {
       meta.priority = 100;
+    }))
+    (openjdk11.overrideAttrs (oldAttrs: {
+      meta.priority = 200;
+    }))
+    (openjdk17.overrideAttrs (oldAttrs: {
+      meta.priority = 300;
     }))
 
     git

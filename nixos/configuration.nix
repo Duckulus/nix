@@ -131,6 +131,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+    git
     wget
     (waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];

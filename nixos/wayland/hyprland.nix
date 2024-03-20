@@ -4,10 +4,10 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.sessionVariables.XCURSOR_SIZE = "24";
 
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.enableNvidiaPatches = true;
+  windowManager.hyprland.enable = true;
+  windowManager.hyprland.enableNvidiaPatches = true;
 
-  wayland.windowManager.hyprland.settings = {
+  windowManager.hyprland.settings = {
     monitor = [
       "DP-1,highrr,0x0,auto"
       "HDMI-A-1,preferred,2560x0,auto"

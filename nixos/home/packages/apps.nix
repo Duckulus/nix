@@ -4,6 +4,7 @@
     pavucontrol
     chromium
     pinta
+    dolphin
 
     neofetch
     eza

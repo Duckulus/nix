@@ -17,6 +17,10 @@
 
   home.sessionVariables = { };
 
+  home.packages = [
+    (import ./scripts/sync.nix { inherit pkgs; })
+  ];
+
   nixpkgs = {
     config.allowUnfree = true;
   };

@@ -28,6 +28,8 @@
   imports = [
     ./packages
     ./wayland
+    ./git
+    ./zsh
   ];
 
   # Let Home Manager install and manage itself.

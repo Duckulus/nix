@@ -40,6 +40,10 @@
     };
   };
 
+  nixpkgs = {
+    config.allowUnfree = true;
+  };  
+
   imports = [
     ./packages
   ];

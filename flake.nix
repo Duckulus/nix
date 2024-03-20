@@ -27,12 +27,6 @@
           specialArgs = { inherit inputs system; };
 
           modules = [
-            {
-             nixpkgs = {
-              config.allowUnfree = true;
-             }; 
-            }
-            
             ./nixos/configuration.nix
           ];
         };

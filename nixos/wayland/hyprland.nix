@@ -4,7 +4,6 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.sessionVariables.XCURSOR_SIZE = "24";
 
-  home.wayland.windowManager.hyprland.enable = true;
   home.wayland.windowManager.hyprland.enableNvidiaPatches = true;
 
   home.wayland.windowManager.hyprland.settings = {

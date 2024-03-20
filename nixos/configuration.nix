@@ -142,6 +142,7 @@
     rofi-wayland
     home-manager
     nix-index
+    openrazer-daemon
   ];
 
   environment.etc = with pkgs; {
@@ -166,6 +167,8 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+
+  hardware.openrazer.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

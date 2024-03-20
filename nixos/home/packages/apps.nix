@@ -11,5 +11,7 @@
     neofetch
     eza
     bat
+    wf-recorder
+    mpv
   ];
 }

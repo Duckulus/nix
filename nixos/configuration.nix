@@ -25,7 +25,7 @@
     PS1="%B%{$fg[white]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
   '';
   users.defaultUserShell = pkgs.zsh;
-  users.users.root.useDefaultShell = false;
+  users.extraUsers.root.useDefaultShell = false;
 
   boot.loader = {
     efi = {

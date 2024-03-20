@@ -42,6 +42,7 @@
 
   imports = [
     ./packages
+    ./wayland
   ];
 
   # Let Home Manager install and manage itself.

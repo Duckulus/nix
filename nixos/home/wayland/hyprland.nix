@@ -67,7 +67,7 @@
     };
 
     exec-once = [
-      "waybar & hyprpaper"
+      "waybar & hyprpaper & vesktop"
     ];
 
     "$mod" = "SUPER";

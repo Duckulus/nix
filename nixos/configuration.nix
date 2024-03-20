@@ -21,7 +21,7 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  users.users.root.useDefaultShell = true;
+  users.users.root.useDefaultShell = false;
 
   boot.loader = {
     efi = {

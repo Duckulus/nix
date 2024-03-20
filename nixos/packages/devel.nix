@@ -15,8 +15,4 @@
     chromedriver
   ];
 
-  environment.etc = with pkgs; {
-    "jdk11".source = openjdk11;
-  };
-
 }

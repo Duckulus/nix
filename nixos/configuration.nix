@@ -24,8 +24,6 @@
     autoload -U colors && colors
     PS1="%B%{$fg[white]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
   '';
-  users.defaultUserShell = pkgs.zsh;
-  users.extraUsers.root.useDefaultShell = false;
 
   boot.loader = {
     efi = {
@@ -116,6 +114,7 @@
     isNormalUser = true;
     description = "aminh";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages

@@ -22,7 +22,7 @@
   programs.zsh.enable = true;
   programs.zsh.promptInit = ''
       autoload -U colors && colors
-      PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+      PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
     '';
   users.users.aminh.shell = pkgs.zsh;
 

@@ -22,9 +22,17 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+  efi = {
+    canTouchEfiVariables = true;
+  };
+    
+  grub = {
+    enable = true;
+    efiSupport = true;
+    device = "/dev/sdc";
+  };
+  };
   boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "nixos"; # Define your hostname.

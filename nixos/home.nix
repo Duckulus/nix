@@ -13,13 +13,9 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  home.file = {
+  home.file = { };
 
-  };
-
-  home.sessionVariables = {
-
-  };
+  home.sessionVariables = { };
 
   programs.git = {
     enable = true;
@@ -42,10 +38,11 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-  };  
+  };
 
   imports = [
     ./packages
+    ./wayland
   ];
 
   # Let Home Manager install and manage itself.

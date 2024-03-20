@@ -21,9 +21,9 @@
 
   programs.zsh.enable = true;
   programs.zsh.promptInit = ''
-      autoload -U colors && colors
-      PS1="%B%{$fg[white]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
-    '';
+    autoload -U colors && colors
+    PS1="%B%{$fg[white]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
+  '';
   users.users.aminh.shell = pkgs.zsh;
 
   boot.loader = {
@@ -63,7 +63,7 @@
   };
 
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -76,12 +76,6 @@
     enable = true;
     enableNvidiaPatches = true;
     xwayland.enable = true;
-  };
-
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-    GTK_APPLICATION_PREFER_DARK_THEME = "1";
   };
 
   # Configure keymap in X11
@@ -128,7 +122,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     iosevka

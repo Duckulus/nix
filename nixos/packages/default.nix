@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ./devel.nix
     ./apps.nix

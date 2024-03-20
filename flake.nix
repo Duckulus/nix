@@ -8,10 +8,12 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "github:hyprwm/Hyprland";
   };
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, hyprland, ... }@inputs:
     let
-        system = "x86_64-linux";
+      system = "x86_64-linux";
 
       pkgs = import nixpkgs {
         inherit system;
@@ -27,6 +29,8 @@
           specialArgs = { inherit inputs system; };
 
           modules = [
+            hyprland.homeManagerModules.default
+            { wayland.windowManager.hyprland.enable = true; }
             ./nixos/configuration.nix
           ];
         };

@@ -15,7 +15,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      aminh = import ./home.nix;
+      aminh = import ./home/home.nix;
     };
   };
 
@@ -24,7 +24,8 @@
     autoload -U colors && colors
     PS1="%B%{$fg[white]%}[%{$fg[blue]%}%n%{$fg[cyan]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
   '';
-  users.users.aminh.shell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
+  users.users.root.useDefaultShell = false;
 
   boot.loader = {
     efi = {
@@ -115,9 +116,6 @@
     isNormalUser = true;
     description = "aminh";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-    ];
   };
 
   # Allow unfree packages
@@ -143,6 +141,7 @@
     kitty
     rofi-wayland
     home-manager
+    nix-index
   ];
 
   environment.etc = with pkgs; {

@@ -17,25 +17,6 @@
 
   home.sessionVariables = { };
 
-  programs.git = {
-    enable = true;
-    userName = "aminh";
-    userEmail = "amin@haddou.net";
-    aliases = {
-      s = "status";
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    shellAliases = {
-      ls = "eza -lh";
-      cat = "bat";
-    };
-  };
-
   nixpkgs = {
     config.allowUnfree = true;
   };

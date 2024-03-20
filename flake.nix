@@ -8,8 +8,13 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nix-index-database, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -28,6 +33,7 @@
 
           modules = [
             ./nixos/configuration.nix
+            nix-index-database.nixosModules.nix-index
           ];
         };
       };

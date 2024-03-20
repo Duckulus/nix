@@ -20,8 +20,7 @@
   };
 
   programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  users.users.root.useDefaultShell = false;
+  users.users.aminh.shell = pkgs.zsh;
 
   boot.loader = {
     efi = {

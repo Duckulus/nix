@@ -152,7 +152,9 @@
   ];
 
   environment.etc = with pkgs; {
+    "jdk8".source = openjdk8;
     "jdk11".source = openjdk11;
+    "jdk17".source = openjdk17;
   };
 
   hardware.opengl = {

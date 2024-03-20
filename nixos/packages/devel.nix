@@ -9,7 +9,9 @@
       python-pkgs.requests
       python-pkgs.selenium
     ]))
+    openjdk8
     openjdk11
+    openjdk17
 
     git
     chromedriver

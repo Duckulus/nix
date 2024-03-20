@@ -4,10 +4,10 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.sessionVariables.XCURSOR_SIZE = "24";
 
-  home.wayland.windowManager.hyprland.enable = true;
-  home.wayland.windowManager.hyprland.enableNvidiaPatches = true;
+  wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland.enableNvidiaPatches = true;
 
-  home.wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = {
     monitor = [
       "DP-1,highrr,0x0,auto"
       "HDMI-A-1,preferred,2560x0,auto"
@@ -24,8 +24,8 @@
       gaps_in = "5";
       gaps_out = "20";
       border_size = "2";
-      col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      col.inactive_border = "rgba(595959aa)";
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
 
       layout = "master";
 
@@ -74,34 +74,34 @@
 
     bind =
       [
-        "$mainMod, RETURN, exec, kitty"
-        "$mainMod, Q, killactive,"
-        "$mainMod, M, exit, "
-        "$mainMod, E, exec, dolphin"
-        "$mainMod, V, togglefloating,"
-        "$mainMod, F, fullscreen, 0"
-        "$mainMod, D, exec, rofi -show drun"
-        "$mainMod, W, exec, firefox"
+        "$mod, RETURN, exec, kitty"
+        "$mod, Q, killactive,"
+        "$mod, M, exit, "
+        "$mod, E, exec, dolphin"
+        "$mod, V, togglefloating,"
+        "$mod, F, fullscreen, 0"
+        "$mod, D, exec, rofi -show drun"
+        "$mod, W, exec, firefox"
 
-        # Move focus with mainMod + hjkl
-        "$mainMod, H, movefocus, l"
-        "$mainMod, J, movefocus, d"
-        "$mainMod, K, movefocus, u"
-        "$mainMod, L, movefocus, r"
+        # Move focus with mod + hjkl
+        "$mod, H, movefocus, l"
+        "$mod, J, movefocus, d"
+        "$mod, K, movefocus, u"
+        "$mod, L, movefocus, r"
 
-        # Move windows with mainMod + hjkl
-        "$mainMod SHIFT, H, movewindow, l"
-        "$mainMod SHIFT, J, movewindow, d"
-        "$mainMod SHIFT, K, movewindow, u"
-        "$mainMod SHIFT, L, movewindow, r"
+        # Move windows with mod + hjkl
+        "$mod SHIFT, H, movewindow, l"
+        "$mod SHIFT, J, movewindow, d"
+        "$mod SHIFT, K, movewindow, u"
+        "$mod SHIFT, L, movewindow, r"
 
         # scratchpad
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        # Scroll through existing workspaces with mainMod + scroll
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
+        # Scroll through existing workspaces with mod + scroll
+        "$mod, mouse_down, workspace, e+1"
+        "$mod, mouse_up, workspace, e-1"
       ]
       ++ (
         # workspaces
@@ -125,8 +125,8 @@
       );
 
     bindm = [
-      "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"
+      "$mod, mouse:272, movewindow"
+      "$mod, mouse:273, resizewindow"
     ];
   };
 

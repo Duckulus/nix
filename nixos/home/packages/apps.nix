@@ -9,6 +9,6 @@
     neofetch
     eza
     bat
-    vesktop
+    unstable.vesktop
   ];
 }

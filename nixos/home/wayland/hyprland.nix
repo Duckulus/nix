@@ -99,7 +99,10 @@
 
         # scratchpad
         "$mod, S, togglespecialworkspace, magic"
-        "$mod SHIFT, S, movetoworkspace, special:magic"
+        "$mod, T, movetoworkspace, special:magic"
+
+        # screenshot
+        "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
         # Scroll through existing workspaces with mod + scroll
         "$mod, mouse_down, workspace, e+1"

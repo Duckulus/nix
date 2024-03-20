@@ -7,11 +7,16 @@
     pinta
     dolphin
     zoom-us
+    thunderbird
 
     neofetch
     eza
     bat
     wf-recorder
     mpv
+    grim
+    slurp
+    feh
+    wl-clipboard
   ];
 }

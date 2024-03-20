@@ -18,7 +18,7 @@
   home.sessionVariables = { };
 
   home.packages = [
-    (import ./scripts/sync.nix { inherit pkgs; })
+    (import ./scripts/nixsync.nix { inherit pkgs; })
   ];
 
   nixpkgs = {
@@ -28,8 +28,8 @@
   imports = [
     ./packages
     ./wayland
-    ./git
-    ./zsh
+    ./git.nix
+    ./zsh.nix
   ];
 
   # Let Home Manager install and manage itself.

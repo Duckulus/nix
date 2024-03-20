@@ -8,10 +8,8 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
   };
-  outputs = { self, nixpkgs, hyprland, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -29,7 +27,6 @@
           specialArgs = { inherit inputs system; };
 
           modules = [
-            hyprland.homeManagerModules.default
             ./nixos/configuration.nix
           ];
         };

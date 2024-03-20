@@ -21,17 +21,13 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+  users.users.root.useDefaultShell = true;
 
   boot.loader = {
-  efi = {
-    canTouchEfiVariables = true;
-  };
-    
-  grub = {
-    enable = true;
-    efiSupport = true;
-    device = "/dev/sdc";
-  };
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    systemd-boot.enable = true;
   };
   boot.supportedFilesystems = [ "ntfs" ];
 

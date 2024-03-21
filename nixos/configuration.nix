@@ -51,6 +51,9 @@
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
+  # keep the hardware clock in local time for windows compatibility
+  time.hardwareClockInLocalTime = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 

@@ -7,7 +7,8 @@
       ls = "eza -lh";
       cat = "bat";
 
-      nixrebuild = "sudo git -C /etc/nixos pull && sudo nixos-rebuild switch && nix-env --delete-generations +3";
+      nixrebuild = "sudo git -C /etc/nixos pull && sudo nixos-rebuild switch";
+      nixtest = "sudo nixos-rebuild test --flake ~/.nix";
     };
   };
 

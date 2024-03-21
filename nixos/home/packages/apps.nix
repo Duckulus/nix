@@ -8,6 +8,7 @@
     dolphin
     zoom-us
     thunderbird
+    obsidian
 
     neofetch
     eza

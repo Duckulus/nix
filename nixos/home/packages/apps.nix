@@ -9,6 +9,7 @@
     zoom-us
     thunderbird
     obsidian
+    vmware-horizon-client
 
     neofetch
     eza

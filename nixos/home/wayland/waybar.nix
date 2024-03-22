@@ -5,9 +5,10 @@
 
     settings = {
       mainBar = {
-
         layer = "top";
         position = "top";
+        margin = "9 13 -10 18";
+
         modules-left = [ "hyprland/workspaces" "hyprland/language" "hyprland/submap" ];
         modules-center = [ "clock" "hyprland/window" "custom/prayer" ];
         modules-right = [ "pulseaudio" "network" "custom/mem" "cpu" "custom/weather" "tray" ];

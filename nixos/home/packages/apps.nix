@@ -5,7 +5,7 @@
     pavucontrol
     chromium
     pinta
-    dolphin
+    pcmanfm
     zoom-us
     thunderbird
     obsidian

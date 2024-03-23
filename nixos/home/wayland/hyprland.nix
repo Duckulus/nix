@@ -81,7 +81,7 @@
         "$mod, E, exec, pcmanfm"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen, 0"
-        "$mod, D, exec, rofi -show drun"
+        "$mod, D, exec, rofi -show drun -show-icons"
         "$mod, W, exec, firefox"
         "bind = ALT, Tab, cyclenext"
         "bind = ALT, Tab, bringactivetotop"

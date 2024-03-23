@@ -2,7 +2,6 @@
 
   home.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   home.sessionVariables.NIXOS_OZONE_WL = "1";
-  home.sessionVariables.XCURSOR_SIZE = "24";
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.enableNvidiaPatches = true;
@@ -70,6 +69,7 @@
 
     exec-once = [
       "waybar & hyprpaper & vesktop"
+      "hyprctl setcursor Bibata-Modern-Ice 24"
     ];
 
     "$mod" = "SUPER";
@@ -83,6 +83,8 @@
         "$mod, F, fullscreen, 0"
         "$mod, D, exec, rofi -show drun"
         "$mod, W, exec, firefox"
+        "bind = ALT, Tab, cyclenext"
+        "bind = ALT, Tab, bringactivetotop"
 
         # Move focus with mod + hjkl
         "$mod, H, movefocus, l"

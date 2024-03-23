@@ -34,6 +34,10 @@
       allow_tearing = "false";
     };
 
+    misc = {
+      force_default_wallpaper = "0";
+    };
+
     decoration = {
 
       rounding = "10";

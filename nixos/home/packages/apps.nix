@@ -11,6 +11,7 @@
     obsidian
     vmware-horizon-client
     dbeaver
+    filezilla
 
     neofetch
     eza

@@ -10,6 +10,7 @@
     thunderbird
     obsidian
     vmware-horizon-client
+    dbeaver
 
     neofetch
     eza

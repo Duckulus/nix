@@ -12,6 +12,7 @@
     vmware-horizon-client
     dbeaver
     filezilla
+    putty
 
     neofetch
     eza

@@ -1,10 +1,15 @@
-{ ... }: {
+{ pkgs, unstable, ... }: {
 
   home.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.enableNvidiaPatches = true;
+  wayland.windowManager.hyprland = {
+    package = unstable.hyprland;
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  xdg.enable = true;
 
   wayland.windowManager.hyprland.settings = {
     monitor = [

@@ -82,7 +82,6 @@
   programs.hyprland = {
     package = unstable.hyprland;
     enable = true;
-    enableNvidiaPatches = true;
     xwayland.enable = true;
   };
 
@@ -146,7 +145,6 @@
     }))
     dunst
     libnotify
-    hyprpaper
     kitty
     rofi-wayland
     home-manager

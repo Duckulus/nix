@@ -23,5 +23,6 @@
     slurp
     feh
     wl-clipboard
+    hyprpaper
   ];
 }

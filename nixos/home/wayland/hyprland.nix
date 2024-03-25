@@ -77,7 +77,9 @@
     };
 
     exec-once = [
-      "waybar & hyprpaper & vesktop"
+      "waybar & hyprpaper"
+      "vesktop"
+      "hypridle"
       "hyprctl setcursor Bibata-Modern-Ice 24"
     ];
 
@@ -120,6 +122,9 @@
         # Scroll through existing workspaces with mod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
+
+        # lock display
+        "$mod, period, exec, hyprlock"
       ]
       ++ (
         # workspaces

@@ -24,5 +24,7 @@
     feh
     wl-clipboard
     hyprpaper
+    unstable.hypridle
+    unstable.hyprlock
   ];
 }

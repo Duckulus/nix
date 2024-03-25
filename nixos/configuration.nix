@@ -149,7 +149,7 @@
     rofi-wayland
     home-manager
     nix-index
-    openrazer-daemon
+    brightnessctl
   ];
 
   environment.etc = with pkgs; {

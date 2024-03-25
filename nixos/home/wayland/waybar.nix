@@ -1,7 +1,6 @@
-{ unstable, ... }: {
+{ ... }: {
 
   programs.waybar = {
-    package = unstable.waybar;
     enable = true;
 
     settings = {

@@ -17,7 +17,10 @@
       "HDMI-A-1,preferred,2560x0,auto"
     ];
 
-    workspace = "1, monitor:DP-1, default:true";
+    workspace = [
+      "1, monitor:DP-1, default:true"
+      "10, monitor:HDMI-A-1, default:true"
+    ];
 
     input = {
       kb_layout = "de";

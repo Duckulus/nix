@@ -80,6 +80,7 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   programs.hyprland = {
+    package = unstable.hyprland;
     enable = true;
     enableNvidiaPatches = true;
     xwayland.enable = true;

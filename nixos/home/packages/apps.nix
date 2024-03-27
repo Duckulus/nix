@@ -15,6 +15,7 @@
     putty
 
     neofetch
+    fortune
     eza
     bat
     wf-recorder

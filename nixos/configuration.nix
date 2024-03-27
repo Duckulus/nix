@@ -79,6 +79,8 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
+  programs.nix-ld.enable = true;
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

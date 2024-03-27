@@ -13,6 +13,7 @@
     dbeaver
     filezilla
     putty
+    xournalpp
 
     neofetch
     fortune

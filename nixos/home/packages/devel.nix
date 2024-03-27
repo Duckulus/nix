@@ -19,6 +19,7 @@
     (openjdk17.overrideAttrs (oldAttrs: {
       meta.priority = 300;
     }))
+    gradle_7
 
     chromedriver
   ];

@@ -80,6 +80,9 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    xorg.libXxf86misc
+  ];
 
   programs.hyprland = {
     enable = true;
@@ -151,12 +154,15 @@
     home-manager
     nix-index
     brightnessctl
+    xorg.libXxf86misc
   ];
 
   environment.etc = with pkgs; {
     "jdk8".source = openjdk8;
     "jdk11".source = openjdk11;
-    "jdk17".source = openjdk17;
+    "jdk17".source = (openjdk17.overrideAttrs (oldAttrs: {
+      enableJavafx = true;
+    }));
   };
 
   hardware.opengl = {

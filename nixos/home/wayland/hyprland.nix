@@ -92,7 +92,7 @@
       [
         "$mod, RETURN, exec, kitty"
         "$mod, Q, killactive,"
-        "$mod, E, exec, pcmanfm"
+        "$mod, E, exec, xfce.thunar"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen, 0"
         "$mod, D, exec, rofi -show drun -show-icons"

@@ -5,7 +5,7 @@
     pavucontrol
     chromium
     pinta
-    pcmanfm
+    xfce.thunar
     zoom-us
     thunderbird
     obsidian

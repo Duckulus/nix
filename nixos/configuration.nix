@@ -34,6 +34,7 @@
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
+      boot.loader.grub.extraEntriesBeforeNixOS = true;
     };
   };
   boot.supportedFilesystems = [ "ntfs" ];
@@ -81,7 +82,9 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    xorg.libXxf86misc
+    xorg.libX11
+    xorg.libXxf86vm
+    xorg.libXrender
   ];
 
   programs.hyprland = {

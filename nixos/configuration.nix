@@ -34,7 +34,7 @@
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
-      boot.loader.grub.extraEntriesBeforeNixOS = true;
+      extraEntriesBeforeNixOS = true;
     };
   };
   boot.supportedFilesystems = [ "ntfs" ];
